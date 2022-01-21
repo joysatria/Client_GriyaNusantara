@@ -1,0 +1,64 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://schemas.datacontract.org/2004/07/ServiceKos" elementFormDefault="qualified" targetNamespace="http://schemas.datacontract.org/2004/07/ServiceKos" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:complexType name="ArrayOfCekKos">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="CekKos" nillable="true" type="tns:CekKos" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfCekKos" nillable="true" type="tns:ArrayOfCekKos" />
+  <xs:complexType name="CekKos">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Deskripsi" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="IDKamar" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="NamaKamar" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="CekKos" nillable="true" type="tns:CekKos" />
+  <xs:complexType name="ArrayOfDetailKos">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="DetailKos" nillable="true" type="tns:DetailKos" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfDetailKos" nillable="true" type="tns:ArrayOfDetailKos" />
+  <xs:complexType name="DetailKos">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Deskripsi" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Harga" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="IDKamar" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Ketersediaan" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="NamaKamar" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="DetailKos" nillable="true" type="tns:DetailKos" />
+  <xs:complexType name="ArrayOfPemesanan">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="Pemesanan" nillable="true" type="tns:Pemesanan" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfPemesanan" nillable="true" type="tns:ArrayOfPemesanan" />
+  <xs:complexType name="Pemesanan">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="IDKamar" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="IDPemesanan" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="NamaPemesan" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="NoTelpon" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="WaktuSewa" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="Pemesanan" nillable="true" type="tns:Pemesanan" />
+  <xs:complexType name="ArrayOfDataRegister">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="DataRegister" nillable="true" type="tns:DataRegister" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfDataRegister" nillable="true" type="tns:ArrayOfDataRegister" />
+  <xs:complexType name="DataRegister">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="id" type="xs:int" />
+      <xs:element minOccurs="0" name="username" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="password" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="kategori" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="DataRegister" nillable="true" type="tns:DataRegister" />
+</xs:schema>
